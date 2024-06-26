@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">  <!-- Link to your CSS file in the css folder -->
+
+  </head>
+  <body>
+    <div class="container mt-5 justify-content-center">
+      <h2>Contact Form</h2>
+      <form class="row g-3 needs-validation" action="{{ url_for('submit_form') }}" method="POST" id="form" novalidate>
+        <div class="col-md-3">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" required>
+
+        </div>
+        <div class="col-md-3">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" required>
+
+        </div>
+        <div class="col-md-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+
+        </div>
+        <div class="col-md-3">
+          <label for="country" class="form-label">Country</label>
+          <select class="form-select" id="country" name="country" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Country 1</option>
+            <option>Country 2</option>
+            <option>Country 3</option>
+          </select>
+
+        </div>
+        <div class="col-md-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Gender</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="M" required>
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="F" required>
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Subject</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="repair" name="subject" value="Repair">
+            <label class="form-check-label" for="repair">Repair</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="order" name="subject" value="Order">
+            <label class="form-check-label" for="order">Order</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="others" name="subject" value="Others" checked>
+            <label class="form-check-label" for="others">Others</label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+    </div>
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="{{ url_for('static', filename='js/vali.js') }}"></script>
+
+  </body>
+</html>

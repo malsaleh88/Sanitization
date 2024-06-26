@@ -1,0 +1,14 @@
+ label.error {
+        color: red;
+        font-size: 0.875em; /* Optional: Adjust the font size to your preference */
+      }
+
+   .form-label {
+      font-size: 0.9rem; /* Adjust label font size */
+    }
+    .form-control {
+      font-size: 0.9rem; /* Adjust input font size */
+    }
+    .form-check-label {
+      font-size: 0.9rem; /* Adjust checkbox label font size */
+    }
